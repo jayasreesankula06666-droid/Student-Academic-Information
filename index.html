@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Academic Information</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🎓 Student Academic Information</h1>
+    <p>Manage student details, marks, and academic performance</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Add Student</h2>
+      <form id="studentForm">
+        <div class="form-grid">
+          <label>Student Name<input id="name" required placeholder="Enter full name"></label>
+          <label>Roll Number<input id="roll" required placeholder="e.g. 101"></label>
+          <label>Course / Class<input id="course" required placeholder="e.g. B.Tech CSE"></label>
+          <label>Semester<input id="semester" required placeholder="e.g. 1"></label>
+          <label>Subject<input id="subject" required placeholder="e.g. Mathematics"></label>
+          <label>Marks (out of 100)<input id="marks" type="number" min="0" max="100" required placeholder="0–100"></label>
+        </div>
+        <button type="submit">Add Record</button>
+      </form>
+      <p id="message" role="status"></p>
+    </section>
+
+    <section class="card">
+      <div class="toolbar">
+        <h2>Academic Records</h2>
+        <input id="search" type="search" placeholder="Search name or roll number" aria-label="Search records">
+      </div>
+      <div class="summary" id="summary">No records yet.</div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Name</th><th>Roll No.</th><th>Course</th><th>Semester</th><th>Subject</th><th>Marks</th><th>Grade</th><th>Action</th></tr></thead>
+          <tbody id="records"></tbody>
+        </table>
+      </div>
+      <button class="secondary" id="clearAll" type="button">Clear All Records</button>
+    </section>
+    <section class="card">
+      <h2>📘 About this project</h2>
+      <p>This beginner-friendly project stores student academic records in your browser using local storage. It is a demo, not a secure student information system.</p>
+    </section>
+  </main>
+  <footer>Student Academic Information Project · HTML, CSS & JavaScript</footer>
+  <script src="script.js"></script>
+</body>
+</html>
